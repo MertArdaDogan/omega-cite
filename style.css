@@ -17,21 +17,19 @@ ul{
 .uppercase{
     text-transform: uppercase;
 }
-.line-1{
-    position: absolute;
+.line-one{
+    position: fixed;
     height: 100%;
     width: 15px;
     background-color: #ff3131;
     left: 23%;
-    transition: 1s ease;
 }
-.line-2{
-    position: absolute;
+.line-two{
+    position: fixed;
     height: 100%;
     width: 25px;
     background-color: #183d79;
     left: 25%;
-    transition: 1s ease;
 }
 nav{
     display: flex;
@@ -39,7 +37,7 @@ nav{
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    padding: 20px 0;
+    padding: 35px 0;
 }
 nav ul{
     display: flex;
@@ -68,7 +66,6 @@ nav ul li a:hover{
     font-size: 25px;
     font-weight: bold;
     position: relative;
-    transition: 1s ease !important;
 }
 .search{
     cursor: pointer;
@@ -76,18 +73,21 @@ nav ul li a:hover{
     left: 8.5%;
     display: block;
 }
-.money{
+.watch{
     font-size: 25px;
     position: relative;
     display: initial;
     cursor: pointer;
 }
 .main-img img{
-    position: absolute;
+    position: fixed;
     width: 570px;
     left: 9.8%;
     top: 30px;
-    transition: 1s ease;
+}
+.title{
+    position: relative;
+    bottom: 85px;
 }
 .header{
     position: absolute;
@@ -97,7 +97,7 @@ nav ul li a:hover{
     font-size: 100px;
     font-weight: 700;
     letter-spacing: -6px;
-    transition: 1s ease;
+    transition: 1s ease-in-out;
 }
 .subheader{
     position: absolute;
@@ -115,12 +115,11 @@ nav ul li a:hover{
     position: absolute;
     top: 750px;
     left: 10%;
-    transition: 1s ease;
 }
 .btn a{
-    position: relative;
-    top: 450px;
-    right: -57%;
+    position: absolute;
+    top: 470px;
+    left: 57.5%;
     background-color: #ff3131;
     color: #fff;
     padding: 10px 20px;
@@ -134,7 +133,7 @@ nav ul li a:hover{
 .socials{
     position: fixed;
     right: 50px;
-    bottom: 100px;
+    bottom: 20px;
 }
 .socials i{
     padding: 10px 10px;
@@ -153,12 +152,25 @@ nav ul li a:hover{
 @media (max-width:1360px){
     .main-img img{
         left: 3.5%;
+        transition: 1s ease;
     }
-    .money{
+    .watch{
         left: 2%;
     }
     .search{
         left: 7.5%;
+    }
+    .line-one{
+        transition: 1s ease;
+    }
+    .line-two{
+        transition: 1s ease;
+    }
+    .year{
+        transition: 1s ease;
+    }
+    .socials{
+        transition: 1s ease;
     }
 }
 @media (max-width:1160px){
@@ -184,7 +196,7 @@ nav ul li a:hover{
     .search{
         display: none;
     }
-    .money{
+    .watch{
         display: none;
     }
     .header{
@@ -195,26 +207,26 @@ nav ul li a:hover{
         font-size: 22px;
     }
     nav{
-        display: flex;
-       justify-content: initial;
-    }
-    nav ul{
-        left: 25%;
+        position: relative;
+        right: 100px;
     }
     .logo{
-        left: 5%;
+        left: 14%;
+    }
+    .btn a{
+        top: 440px;
     }
 }
 @media (max-width:850px){
     .main-img img{
         left: -5%;
-        top: 70px;
+        top: 100px;
         width: 500px;
     }
-    .line-1{
+    .line-one{
         left: 16.5%;
     }
-    .line-2{
+    .line-two{
         left: 20%;
     }
     nav ul{
@@ -227,13 +239,13 @@ nav ul li a:hover{
 @media (max-width:712px){
     .bar{
         display: block;
-        left: 70%;
+        left: 30%;
     }
     nav ul li{
         display: none;
     }
     .logo{
-        left: 25%;
+        left: 27%;
     }
     .subheader{
         left: 58%;
@@ -252,14 +264,14 @@ nav ul li a:hover{
         font-size: 15px;
         color: #ff3131;
         font-weight: 500;
-    transform: rotateZ(90deg);
+        transform: rotateZ(90deg);
     }
     .main-img img{
-        width: 420px;
+        width: 430px;
         left: -10.5%;
     }
 }
-@media (max-width:480px){
+@media (max-width:490px){
     .subheader{
         color: #fff;
         top: 400px;
@@ -268,22 +280,20 @@ nav ul li a:hover{
         font-size: 22px;
         font-weight: 500;
     }
-    .line-1{
+    .line-one{
         left: 14%;
     }
-    .line-2{
+    .line-two{
         left: 18%;
     }
     .socials{
-        bottom: 70px;
+        right: 4%;
+        bottom: 30px;
     }
 }
 @media (max-width:430px){
     .header{
         font-size: 50px;
-    }
-    .bar{
-        left: 60%;
     }
     .main-img img{
         width: 400px;
@@ -293,22 +303,13 @@ nav ul li a:hover{
 }
 @media (max-width:400px){
     .main-img img{
-        left: -22%;
+        left: -17%;
     }
     .year{
         font-size: 25px;
         top: 750px;
     }
     .btn a{
-        left: 80px;
-    }
-    .header{
-        left: 7%;
-    }
-    .subheader{
-        left: 16%;
-    }
-    .bar{
-        left: 50%;
+        left: 40%;
     }
 }
